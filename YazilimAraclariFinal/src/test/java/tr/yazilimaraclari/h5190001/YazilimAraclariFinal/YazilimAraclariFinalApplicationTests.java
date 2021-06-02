@@ -14,7 +14,6 @@ class YazilimAraclariFinalApplicationTests {
 	void contextLoads() {
 	}
 	
-	/*
 	@Test
 	public final void getProductTest() {
 		List<Product> list = ProductStore.getProducts();
@@ -29,6 +28,6 @@ class YazilimAraclariFinalApplicationTests {
 		Boolean isAdded = list.contains(products);
 		assertEquals(true, isAdded);
 	}
-	*/
+	
 
 }
