@@ -1,6 +1,6 @@
 
 language : java
-script : "mvn -f pom.xml clean test verify"
+script : "mvn -f YazilimAraclariFinal/pom.xml clean test verify"
 jdk: 
    - openjdk8
 after_success:
