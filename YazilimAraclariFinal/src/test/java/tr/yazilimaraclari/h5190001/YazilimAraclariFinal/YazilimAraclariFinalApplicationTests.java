@@ -29,5 +29,50 @@ class YazilimAraclariFinalApplicationTests {
 		assertEquals(true, isAdded);
 	}
 	
+	@Test
+	public final void removeProductTest() {
+		String poz = "1";
+		List<Product> list = ProductStore.getProducts();
+		List<Product> afterList = ProductStore.removeProduct(poz);
+		Boolean isDeleted = false;
+		if(list == afterList) {
+			isDeleted = true;
+		}
+		
+		assertEquals(true, isDeleted);
+	}
+	
+	@Test
+	public final void removeNoProductTest() {
+		String poz = "8345830";
+		
+		List<Product> list = ProductStore.getProducts();
+		List<Product> afterList = ProductStore.removeProduct(poz);
+		
+		Boolean isDeleted = true;
+		
+		if(list == afterList) {
+			isDeleted = false;
+		}
+		
+		assertEquals(false, isDeleted);
+	}
+	
+	@Test
+	public final void getNameTest() {
+		List<Product> list = ProductStore.getProducts();
+		String name = "Kalem";
+		Boolean isGet = false;
+		if(list.get(0).getName() == name) {
+			isGet = true;
+		}
+		
+		assertEquals(true, isGet);	
+	}
+	
+	@Test
+	public void applicationContextTest() {
+	    YazilimAraclariFinalApplication.main(new String[] {});
+	}
 
 }
